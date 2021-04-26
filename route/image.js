@@ -37,11 +37,6 @@ const uploadImage = async (req, res) => {
   console.log(file)
 }
 
-const home = (req, res) => {
-  res.status(200).json({ status: 'success', message: 'Home' })
-}
-
-router.post('/api/v1/image', uploadImage)
-router.get('/', home)
+router.post('/', uploadImage)
 
 module.exports = router
