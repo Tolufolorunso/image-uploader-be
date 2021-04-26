@@ -16,6 +16,7 @@ const uploadImage = async (req, res) => {
   // fileToDelete = fileToDelete[fileToDelete.length - 1]
   // console.log('13', fileToDelete)
   if (!acceptedImage.includes(file.mimetype.split('/')[1])) {
+    console.log(file.mimetype, file.mimetype.split('/')[1])
     return res
       .status(400)
       .json({ status: 'fail', errorMsg: 'Accepted image format, jpeq,jpg,png' })

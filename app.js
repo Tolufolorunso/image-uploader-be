@@ -32,9 +32,10 @@ app.use(
     // tempFilesDir: '/tmp/',
   })
 )
-app.get((req, res) => {
+app.get('/', (req, res) => {
   res.status(200).json({ status: 'success', message: 'Home' })
 })
+
 app.use('/api/v1/image', imageRouter)
 
 const PORT = process.env.PORT || 5000
