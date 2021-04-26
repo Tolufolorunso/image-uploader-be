@@ -6,7 +6,9 @@ const path = require('path')
 const uploadImage = async (req, res) => {
   const acceptedImage = ['jpg', 'jpeg', 'png']
   if (!req.files || Object.keys(req.files).length === 0) {
-    return res.status(400).json({ status: 'success', errorMsg: imageUrl })
+    return res
+      .status(400)
+      .json({ status: 'success', errorMsg: 'upload an image' })
   }
   // console.log(path.join(__dirname, '../', 'tmp'))
   const file = req.files.image
