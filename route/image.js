@@ -29,7 +29,6 @@ const uploadImage = async (req, res) => {
     })
 
     const imageUrl = image.url.substr(5)
-    console.log('46', imageUrl)
 
     res.status(200).json({ status: 'success', imageUrl })
   } catch (error) {
